@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/settings"
+        android:id="@+id/tittleSettings"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sound"
+        android:id="@+id/checkBoxSound"
+        android:checked="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:foregroundGravity="fill_horizontal|center_vertical"
+        android:enabled="true"
+        android:clickable="true"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/resetHighscore"
+        android:id="@+id/buttonReset"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
+<!-- From: file:/C:/Users/Guillaume/Documents/CF/app/src/main/res/layout/settings.xml -->

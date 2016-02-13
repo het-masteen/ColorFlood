@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Color Flood</string>
+    <string name="exit_message">Voulez-vous vraiment quitter l\'application ?</string>
+    <string name="highscore">Meilleurs scores</string>
+    <string name="play">Jouer</string>
+    <string name="settings">Réglages</string>
+    <string name="sound">Son</string>
+    <string name="won_begin">Gagné</string>
+    <string name="won_end">coups</string>
+    <string name="resetHighscore">Réinitialiser les meilleurs scores</string>
+    <string name="level">Niveau</string>
+</resources>
