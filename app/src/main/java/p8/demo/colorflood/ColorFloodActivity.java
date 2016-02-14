@@ -17,6 +17,8 @@ public class ColorFloodActivity extends Activity{
     private ToggleButton toggleButton;
     private SharedPreferences prefs;
     private SharedPreferences.Editor editor;
+    private MediaPlayer mediaPlayer;
+    private int lengthAtPause=0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -69,21 +71,26 @@ public class ColorFloodActivity extends Activity{
     }
 
     public void playerHandler(){
-        //if(prefs.getBoolean("sound",false)){
-            MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.laneafree);
+        if(prefs.getBoolean("sound",false)){
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.laneafree);
             mediaPlayer.start();
-        //}
+        }
     }
 
     public void onPause(){
+        mediaPlayer.pause();
+        lengthAtPause=mediaPlayer.getCurrentPosition();
         super.onPause();
     }
 
     public void onResume(){
+        mediaPlayer.seekTo(lengthAtPause);
+        mediaPlayer.start();
         super.onResume();
     }
 
     public void onStop(){
+        mediaPlayer.stop();
         super.onStop();
     }
 
